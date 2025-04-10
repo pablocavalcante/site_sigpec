@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F7F6F9;
+  font-family: "DM Sans", sans-serif;
+}
+
+
+header {
+  color: #000;
+}
+
+.nav {
+  background-color: #eb6608;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 20px;
+}
+
+.infos {
+  border: 2px solid aqua;
+}
+
+.infos a,
+.redes-sociais a {
+  color: #fff;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.infos span {
+  margin: 0 5px;
+}
+
+.redes-sociais span {
+  margin: 0 5px;
+}
+
+.brasao {
+  width: 15px;
+}
+
+.brasao-branco{
+  width: 25px;
+}
+
+
+.sec-header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 120px;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.sec-header span {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.sec-header strong {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.top-bar {
+  background-color: #eb6608;
+  color: white;
+  font-size: 0.875rem;
+}
+.top-bar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+.middle-header img {
+  height: 50px;
+  margin-right: 10px;
+}
+.nav-link {
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 30px;
+}
+
+
+.program-box {
+  height: 150px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 5px 5px 50px rgba(0,0,0,0.05);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+  .program-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+
+
+  .container-blocos{
+    margin: 40px;
+  }
+
+  .lh-xl {
+    line-height: 2.5;
+  }
+
+  .brasao-footer {
+    height: 35px;
+    margin-right: 50px;
+  }
+
+
+
