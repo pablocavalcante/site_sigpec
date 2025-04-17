@@ -25,10 +25,6 @@ header {
   padding: 8px 20px;
 }
 
-.infos {
-  border: 2px solid aqua;
-}
-
 .infos a,
 .redes-sociais a {
   color: #fff;
@@ -42,10 +38,6 @@ header {
 
 .redes-sociais span {
   margin: 0 5px;
-}
-
-.brasao {
-  width: 15px;
 }
 
 .brasao-branco{
