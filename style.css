@@ -136,5 +136,9 @@ header {
     margin-right: 50px;
   }
 
+  .cursor-default {
+    cursor: default;
+  }
+
 
 
