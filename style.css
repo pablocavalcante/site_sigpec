@@ -81,7 +81,8 @@ header {
 
 .container-blocos {
   font-size: 1.6rem;
-  margin: 4rem;
+  margin: 4rem auto;
+  max-width: 110rem;
 }
 
 .lh-xl {
@@ -111,7 +112,7 @@ header {
   padding: 2rem;
   background-color: #fff;
   border-radius: 1.2rem;
-  height: 15rem;
+  height: 25rem;
   box-shadow: 0.5rem 0.5rem 5rem rgba(0, 0, 0, 0.05);
   display: flex;
   align-items: center;
@@ -128,3 +129,30 @@ header {
 .container{
   font-size: 1.6rem;
 }
+
+.texto-menor {
+  font-size: 1.2rem;
+}
+
+/* Button Acessibilidade */
+.btn {
+ margin-left: 8px;
+ border: none;
+}
+
+.btn button {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #fff;
+  margin: 2px;
+  text-align: center;
+}
+
+
+
+
+/* Responsividade */
+
+
+

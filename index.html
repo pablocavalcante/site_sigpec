@@ -30,47 +30,44 @@
   <body>
     <!-- Faixa Laranja -->
     <div class="top-bar py-2">
-      <div
-        class="container d-flex justify-content-around align-items-center flex-wrap"
-      >
-        <div class="d-flex flex-wrap align-items-center small">
+      <div class="container d-flex justify-content-around align-items-center flex-wrap">
+        <div class="d-flex flex-wrap align-items-center small texto-menor acessibilidade">
           <a href="http://transparencia.prefeitura.sp.gov.br/sistema-eletronico-de-informacao-ao-cidadao-e-sic/">Acesso à informação</a> |
-          <a href="http://transparencia.prefeitura.sp.gov.br/">Transparência São Paulo</a> | <a href="https://legislacao.prefeitura.sp.gov.br/">Legislação</a> |
-          <a href="https://capital.sp.gov.br/web/ouvidoria/w/fale_com_a_ouvidoria/227268">Ouvidoria</a> |
+          <a href="http://transparencia.prefeitura.sp.gov.br/">Transparência São Paulo</a> | <a href="https://legislacao.prefeitura.sp.gov.br/" class="d-none d-lg-block">Legislação</a> |
+          <a href="https://capital.sp.gov.br/web/ouvidoria/w/fale_com_a_ouvidoria/227268" class="d-none d-lg-block">Ouvidoria</a> |
           <a href="https://sp156.prefeitura.sp.gov.br/portal">156</a>
         </div>
-        <div class="d-flex align-items-center flex-wrap small ">
+        <div class="d-flex align-items-center flex-wrap acessibilidade d-none d-lg-block">
           <a href="https://br.linkedin.com/company/prefeitura-de-sao-paulo"><i class="bi bi-linkedin"></i></a>
           <a href="https://www.tiktok.com/@prefsp"><i class="bi bi-tiktok"></i></a>
           <a href="https://www.youtube.com/prefeiturasaopaulo"><i class="bi bi-youtube"></i></a>
           <a href="https://x.com/prefsp"><i class="bi bi-twitter-x"></i></a>
           <a href="https://www.instagram.com/prefsp/#"><i class="bi bi-instagram"></i></a>
           <a href="https://www.facebook.com/PrefSP"><i class="bi bi-facebook"></i></a>
-          <a href="https://diariooficial.prefeitura.sp.gov.br/md_epubli_controlador.php?acao=inicio">
+          <a href="https://diariooficial.prefeitura.sp.gov.br/md_epubli_controlador.php?acao=inicio" class="texto-menor acessibilidade">
             <img class="brasao-branco" src="./imgs/brasao_branco-removebg-preview.png" alt="">
             Diário Oficial
           </a> |
-          <a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/acessibilidade">Acessibilidade</a>
+          <!-- Função para aumentar e diminuir a fonte -->
+          <div class="btn btn-sm acessibilidade">
+            <button onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
+            <button onclick="diminuirFonte()" aria-label="Diminuir fonte">A-</button>
+          </div>
+
+          <a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/acessibilidade" class="texto-menor acessibilidade">Acessibilidade</a>
         </div>
       </div>
     </div>
 
     <!-- Faixa Branca -->
     <header class="middle-header border-bottom py-3 shadow-sm" style="background-color: #FFF;">
-      <div
-        class="container d-flex align-items-center justify-content-around flex-wrap"
-      >
+      <div class="container d-flex align-items-center justify-content-lg-around flex-wrap">
         <div class="d-flex align-items-center">
-          <img class="logo_faixa"  src=".//imgs/logo_sp.png" alt="Brasão SP" />
+          <img class="logo_faixa" style="width: 200px; height: auto;"  src=".//imgs/logo_sp.png" alt="Brasão SP" />
         </div>
-        <nav class="d-flex gap-4">
+        <nav class="d-flex gap-4 d-none d-lg-flex">
           <div class="dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              data-bs-toggle="dropdown"
-              >Órgãos públicos</a
-            >
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Órgãos públicos</a>
  
             <ul class="dropdown-menu p-3">
               <div class="row">
@@ -171,40 +168,43 @@
     </header>
     
 
-    <div class="container-blocos">
-      <div class="row g-4">
-        <div class="col-12 col-md-4">
-          <a href="http://sigpecrh.app.prodam/" class="program-link" target="_blank">
-            <div class="program-box">SIGPEC-RH</div>
-          </a>
-        </div>
-        <div class="col-12 col-md-4">
-          <a href="http://sigpecdss.pmsp/Ergon/Ergon/PM/MenuPM.tp" class="program-link" target="_blank">
-            <div class="program-box">SIGPEC-DSS</div>
-          </a>
-        </div>
-        <div class="col-12 col-md-4">
-          <a href="https://www.areaprivada.prefeitura.sp.gov.br/PortalPMSP/PortalPMSP/Portal/PMSPprt001.tp" class="program-link" target="_blank">
-            <div class="program-box">SIPGEC-PS</div>
-          </a>
-        </div>
-        <div class="col-12 col-md-4">
-          <a href="" class="program-link" target="_blank">
-            <div class="program-box">SIGPEC-ES</div>
-          </a>
-        </div>
-        <div class="col-12 col-md-4">
-          <a href="https://prontuarioeletronico.prefeitura.sp.gov.br/" class="program-link" target="_blank">
-            <div class="program-box">SIGPEC-PE</div>
-          </a>
-        </div>
-        <div class="col-12 col-md-4">
-          <a href="" class="program-link" target="_blank">
-            <div class="program-box">SIGPEC-SST</div>
-          </a>
+    <div class="container"> 
+      <div class="container-blocos">
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <a href="http://sigpecrh.app.prodam/" class="program-link" target="_blank">
+              <div class="program-box">SIGPEC-RH</div>
+            </a>
+          </div>
+          <div class="col-12 col-md-4">
+            <a href="http://sigpecdss.pmsp/Ergon/Ergon/PM/MenuPM.tp" class="program-link" target="_blank">
+              <div class="program-box">SIGPEC-DSS</div>
+            </a>
+          </div>
+          <div class="col-12 col-md-4">
+            <a href="https://www.areaprivada.prefeitura.sp.gov.br/PortalPMSP/PortalPMSP/Portal/PMSPprt001.tp" class="program-link" target="_blank">
+              <div class="program-box">SIPGEC-PS</div>
+            </a>
+          </div>
+          <div class="col-12 col-md-4">
+            <a href="#" class="program-link" target="_blank">
+              <div class="program-box">SIGPEC-ES</div>
+            </a>
+          </div>
+          <div class="col-12 col-md-4">
+            <a href="https://prontuarioeletronico.prefeitura.sp.gov.br/" class="program-link" target="_blank">
+              <div class="program-box">SIGPEC-PE</div>
+            </a>
+          </div>
+          <div class="col-12 col-md-4">
+            <a href="" class="program-link" target="_blank">
+              <div class="program-box">SIGPEC-SST</div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
+    
 
 
 
@@ -212,9 +212,9 @@
     <!-- Footer -->
     <footer class="text-white pt-5 pb-3" style="background-color: #ec6608;">
       <div class="container">
-        <div class="row justify-content-around">
+        <div class="row justify-content-around acessibilidade">
           
-          <div class="col-6 col-md-2 mb-2 mt-3 px-5">
+          <div class="col-6 col-md-2 mb-2 mt-5 px-5">
             <p class="fw-bold text-nowrap normal mb-3 cursor-default">Prefeitura de São Paulo</p>
             <ul class="list-unstyled small">
               <li><a href="https://capital.sp.gov.br/agenda-do-prefeito" class="text-white text-decoration-none lh-xl text-nowrap ">Agenda do Prefeito</a></li>
@@ -228,7 +228,7 @@
           </div>
     
           
-          <div class="col-6 col-md-2 mb-2 mt-3 px-5">
+          <div class="col-6 col-md-2 mb-2 mt-5 px-5">
             <p class="fw-bold text-nowrap small mb-3 cursor-default">Serviços para o Cidadão</p>
             <ul class="list-unstyled small">
               <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=195534" class="text-white text-decoration-none lh-xl text-nowrap ">Animais</a></li>
@@ -248,7 +248,7 @@
           </div>
     
           
-          <div class="col-6 col-md-2 mb-2 mt-3 px-5">
+          <div class="col-6 col-md-2 mb-2 mt-5 px-5">
             <p class="fw-bold text-nowrap small mb-3 cursor-default">Serviços para Empresas</p>
             <ul class="list-unstyled small">
               <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=197736" class="text-white text-decoration-none lh-xl text-nowrap">Abertura de Empresas</a></li>
@@ -268,7 +268,7 @@
           </div>
     
           
-          <div class="col-6 col-md-2 mb-2 mt-3 px-5">
+          <div class="col-6 col-md-2 mb-2 mt-5 px-5">
             <p class="fw-bold text-nowrap small mb-3 cursor-default">Serviços para o Servidor</p>
             <ul class="list-unstyled small">
               <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=212939" class="text-white text-decoration-none lh-xl text-nowrap">Atendimento</a></li>
@@ -284,7 +284,7 @@
           </div>
     
           
-          <div class="col-6 col-md-2 mb-2 mt-3 px-5">
+          <div class="col-6 col-md-2 mb-2 mt-5 px-5">
             <p class="fw-bold text-nowrap small mb-3 cursor-default">Acontece na cidade</p>
             <ul class="list-unstyled small">
               <li><a href="https://capital.sp.gov.br/noticias" class="text-white text-decoration-none lh-xl text-nowrap">Notícias</a></li>
@@ -332,9 +332,6 @@
             © COPYRIGHT 2025, Prefeitura Municipal de São Paulo - CEP: 01002-020
           </div>
         </div>
-    
-        
-
     </footer>
     
 
@@ -343,6 +340,7 @@
 
 
     <!-- Bootstrap JS -->
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
