@@ -171,3 +171,23 @@ span {
     cursor: pointer;
   }
 }
+
+.dropdown .dropdown-menu {
+  opacity: 0;
+  transform: translateY(30px);
+  visibility: hidden;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* Mostra o dropdown com animação no hover */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(2);
+  visibility: visible;
+}
+
+
+
+
+
