@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 html {
   font-size: 62.5%; /* Agora 1rem = 10px */
@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background-color: #F7F6F9;
+  background-color: #f7f6f9;
   font-family: "DM Sans", sans-serif;
 }
 
@@ -28,13 +28,15 @@ header {
   padding: 0.8rem 2rem;
 }
 
-.infos a,.redes-sociais a {
+.infos a,
+.redes-sociais a {
   color: #fff;
   margin: 0 0.5rem;
   text-decoration: none;
 }
 
-.infos span,.redes-sociais span {
+.infos span,
+.redes-sociais span {
   margin: 0 0.5rem;
 }
 
@@ -56,7 +58,8 @@ header {
   align-items: center;
 }
 
-.logo img, .middle-header img {
+.logo img,
+.middle-header img {
   height: 5rem;
   margin-right: 1rem;
 }
@@ -118,7 +121,6 @@ header {
   align-items: center;
   justify-content: center;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-
 }
 
 .program-box:hover {
@@ -126,33 +128,45 @@ header {
   box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.2);
 }
 
-.container{
+.container {
   font-size: 1.6rem;
 }
 
-.texto-menor {
+.texto-menor,
+span {
   font-size: 1.2rem;
 }
 
 /* Button Acessibilidade */
 .btn {
- margin-left: 8px;
- border: none;
+  margin-left: 0.8rem;
+  border: none;
 }
 
 .btn button {
-  border: 1px solid #fff;
+  border: 0.1rem solid #fff;
   border-radius: 50%;
   background-color: transparent;
   color: #fff;
-  margin: 2px;
+  margin: 0.2rem;
   text-align: center;
 }
 
-
-
+.dropdown-item {
+  font-size: 1.6rem;
+}
 
 /* Responsividade */
+@media (max-width: 992px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    line-height: 0;
+    margin-bottom: 2rem;
+  }
 
-
-
+  .footer-container p {
+    cursor: pointer;
+  }
+}
