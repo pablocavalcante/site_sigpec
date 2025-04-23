@@ -30,40 +30,79 @@
   <body>
     <!-- Faixa Laranja -->
     <div class="top-bar py-2">
-      <div
-        class="container d-flex justify-content-around align-items-center flex-wrap"
-      >
-        <div class="d-flex flex-wrap align-items-center small">
-          <a href="http://transparencia.prefeitura.sp.gov.br/sistema-eletronico-de-informacao-ao-cidadao-e-sic/">Acesso à informação</a> |
-          <a href="http://transparencia.prefeitura.sp.gov.br/">Transparência São Paulo</a> | <a href="https://legislacao.prefeitura.sp.gov.br/">Legislação</a> |
-          <a href="https://capital.sp.gov.br/web/ouvidoria/w/fale_com_a_ouvidoria/227268">Ouvidoria</a> |
+      <div class="container d-flex justify-content-around align-items-center flex-wrap">
+        <div class="d-flex flex-wrap align-items-center small texto-menor acessibilidade">
+          <a href="http://transparencia.prefeitura.sp.gov.br/sistema-eletronico-de-informacao-ao-cidadao-e-sic/">Acesso à informação </a>
+          |
+          <a href="http://transparencia.prefeitura.sp.gov.br/">Transparência São Paulo </a> <span></span>
+          |
+          <a href="https://legislacao.prefeitura.sp.gov.br/" class="d-none d-lg-block">Legislação | </a>
+          
+          <a href="https://capital.sp.gov.br/web/ouvidoria/w/fale_com_a_ouvidoria/227268" class="d-none d-lg-block">Ouvidoria | </a>
+          
           <a href="https://sp156.prefeitura.sp.gov.br/portal">156</a>
         </div>
-        <div class="d-flex align-items-center flex-wrap small ">
-          <a href="https://br.linkedin.com/company/prefeitura-de-sao-paulo"><i class="bi bi-linkedin"></i></a>
-          <a href="https://www.tiktok.com/@prefsp"><i class="bi bi-tiktok"></i></a>
-          <a href="https://www.youtube.com/prefeiturasaopaulo"><i class="bi bi-youtube"></i></a>
-          <a href="https://x.com/prefsp"><i class="bi bi-twitter-x"></i></a>
-          <a href="https://www.instagram.com/prefsp/#"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.facebook.com/PrefSP"><i class="bi bi-facebook"></i></a>
-          <a href="https://diariooficial.prefeitura.sp.gov.br/md_epubli_controlador.php?acao=inicio">
-            <img class="brasao-branco" src="./imgs/brasao_branco-removebg-preview.png" alt="">
+
+        <div class="d-flex align-items-center flex-wrap acessibilidade d-none d-lg-block">
+          <a href="https://br.linkedin.com/company/prefeitura-de-sao-paulo">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://www.tiktok.com/@prefsp">
+            <i class="bi bi-tiktok"></i>
+          </a>
+          <a href="https://www.youtube.com/prefeiturasaopaulo">
+            <i class="bi bi-youtube"></i>
+          </a>
+          <a href="https://x.com/prefsp">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="https://www.instagram.com/prefsp/#"
+            ><i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/PrefSP"
+            ><i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://diariooficial.prefeitura.sp.gov.br/md_epubli_controlador.php?acao=inicio" class="texto-menor acessibilidade">
+            <img class="brasao-branco" src="./imgs/brasao_branco-removebg-preview.png" alt=""/>
             Diário Oficial
-          </a> |
-          <a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/acessibilidade">Acessibilidade</a>
+          </a>
+          |
+
+          <!-- Função para aumentar e diminuir a fonte -->
+          <div class="btn btn-sm acessibilidade">
+            <button onclick="aumentarFonte()" aria-label="Aumentar fonte">
+              A+
+            </button>
+            <button onclick="diminuirFonte()" aria-label="Diminuir fonte">
+              A-
+            </button>
+          </div>
+
+          <a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/acessibilidade" class="texto-menor acessibilidade">
+            Acessibilidade
+          </a>
+          
         </div>
       </div>
     </div>
 
     <!-- Faixa Branca -->
-    <header class="middle-header border-bottom py-3 shadow-sm" style="background-color: #FFF;">
+    <header
+      class="middle-header border-bottom py-3 shadow-sm"
+      style="background-color: #fff"
+    >
       <div
-        class="container d-flex align-items-center justify-content-around flex-wrap"
+        class="container d-flex align-items-center justify-content-lg-around flex-wrap"
       >
         <div class="d-flex align-items-center">
-          <img class="logo_faixa"  src=".//imgs/logo_sp.png" alt="Brasão SP" />
+          <img
+            class="logo_faixa cursor-pointer"
+            style="width: 200px; height: auto"
+            src=".//imgs/logo_sp.png"
+            alt="Brasão SP"
+          />
         </div>
-        <nav class="d-flex gap-4">
+        <nav class="d-flex gap-4 d-none d-lg-flex">
           <div class="dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -71,20 +110,36 @@
               data-bs-toggle="dropdown"
               >Órgãos públicos</a
             >
- 
+
             <ul class="dropdown-menu p-3">
               <div class="row">
                 <div class="col">
-                  <li><a class="dropdown-item fw-bold" href="https://capital.sp.gov.br/secretarias">Secretarias</a></li>
-                  <li><a class="dropdown-item fw-bold" href="https://capital.sp.gov.br/subprefeitura">Subprefeituras</a></li>
-                  <li><a class="dropdown-item fw-bold" href="https://capital.sp.gov.br/outros-%C3%B3rg%C3%A3os">Outros órgãos</a></li>
+                  <li>
+                    <a
+                      class="dropdown-item fw-bold"
+                      href="https://capital.sp.gov.br/secretarias"
+                      >Secretarias</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item fw-bold"
+                      href="https://capital.sp.gov.br/subprefeitura"
+                      >Subprefeituras</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item fw-bold"
+                      href="https://capital.sp.gov.br/outros-%C3%B3rg%C3%A3os"
+                      >Outros órgãos</a
+                    >
+                  </li>
                 </div>
- 
               </div>
             </ul>
           </div>
- 
- 
+
           <div class="dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -92,54 +147,257 @@
               data-bs-toggle="dropdown"
               >Serviços</a
             >
- 
-            <ul class="dropdown-menu p-3" style="min-width: 800px;">
+
+            <ul class="dropdown-menu p-3" style="min-width: 800px">
               <div class="row">
                 <div class="col">
-                  <li><a class="dropdown-item fw-bold" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642">Cidadão</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=195534">Animais</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=182553">Casa e Moradia</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=193794">Cultura e Economia Criativa</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=193398">Educação</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=194817">Esportes e Lazer</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=185692">Família e Assistência Social</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=190770">Fazenda</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=23050391">Funerários e Cemiteriais</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=188442">Mobilidade Urbana e Transporte</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=183339">Rua e Bairro</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=190857">Saúde e Bem-estar</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=196305">Segurança</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=190800">Trabalho</a></li>
+                  <li>
+                    <a
+                      class="dropdown-item fw-bold"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642"
+                      >Cidadão</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=195534"
+                      >Animais</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=182553"
+                      >Casa e Moradia</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=193794"
+                      >Cultura e Economia Criativa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=193398"
+                      >Educação</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=194817"
+                      >Esportes e Lazer</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=185692"
+                      >Família e Assistência Social</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=190770"
+                      >Fazenda</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=23050391"
+                      >Funerários e Cemiteriais</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=188442"
+                      >Mobilidade Urbana e Transporte</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=183339"
+                      >Rua e Bairro</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=190857"
+                      >Saúde e Bem-estar</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=196305"
+                      >Segurança</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=190800"
+                      >Trabalho</a
+                    >
+                  </li>
                 </div>
                 <div class="col">
-                  <li><a class="dropdown-item fw-bold" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645">Empresa</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=197736">Abertura de Empresas</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=197907">Alvarás, Certidões e Licenças</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=199983">Cadastros</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201153">Consultas, Declarações e Normas</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201903">Cursos</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201594">Empreendedorismo</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=199248">Impostos e Taxas</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201429">Legislação</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=200490">Licitações e Fornecedores</a></li>
-                  <li><a class="dropdown-item" href="https://nfpaulistana.prefeitura.sp.gov.br/">Nota do Milhão</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201813">Oportunidades</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=197769">Programas e Benefícios</a></li>
+                  <li>
+                    <a
+                      class="dropdown-item fw-bold"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645"
+                      >Empresa</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=197736"
+                      >Abertura de Empresas</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=197907"
+                      >Alvarás, Certidões e Licenças</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=199983"
+                      >Cadastros</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201153"
+                      >Consultas, Declarações e Normas</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201903"
+                      >Cursos</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201594"
+                      >Empreendedorismo</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=199248"
+                      >Impostos e Taxas</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201429"
+                      >Legislação</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=200490"
+                      >Licitações e Fornecedores</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://nfpaulistana.prefeitura.sp.gov.br/"
+                      >Nota do Milhão</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201813"
+                      >Oportunidades</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=197769"
+                      >Programas e Benefícios</a
+                    >
+                  </li>
                 </div>
                 <div class="col">
-                  <li><a class="dropdown-item fw-bold" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/turismo?rootCategoryId=122648">Turismo</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/turismo?rootCategoryId=122648&categoryId=232578">Atrações</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/turismo?rootCategoryId=122648&categoryId=232566">Compras</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/turismo?rootCategoryId=122648&categoryId=232570">Gastronomia</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/turismo?rootCategoryId=122648&categoryId=232586">Informações</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/turismo?rootCategoryId=122648&categoryId=232574">Noite</a></li>
-                  <li><a class="dropdown-item" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/turismo?rootCategoryId=122648&categoryId=232582">Roteiros</a></li>
+                  <li>
+                    <a
+                      class="dropdown-item fw-bold"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/turismo?rootCategoryId=122648"
+                      >Turismo</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/turismo?rootCategoryId=122648&categoryId=232578"
+                      >Atrações</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/turismo?rootCategoryId=122648&categoryId=232566"
+                      >Compras</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/turismo?rootCategoryId=122648&categoryId=232570"
+                      >Gastronomia</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/turismo?rootCategoryId=122648&categoryId=232586"
+                      >Informações</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/turismo?rootCategoryId=122648&categoryId=232574"
+                      >Noite</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/turismo?rootCategoryId=122648&categoryId=232582"
+                      >Roteiros</a
+                    >
+                  </li>
                 </div>
               </div>
             </ul>
           </div>
-         
- 
+
           <div class="dropdown">
             <a
               class="nav-link dropdown-toggle"
@@ -147,8 +405,8 @@
               data-bs-toggle="dropdown"
               >Servidores</a
             >
-           
-             <ul class="dropdown-menu p-3">
+
+            <ul class="dropdown-menu p-3">
               <div class="row">
                 <div class="col">
                   <li><a class="dropdown-item fw-bold" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=212939">Atendimento</a></li>
@@ -159,165 +417,482 @@
                   <li><a class="dropdown-item fw-bold" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=207796">Gestão de Pessoas</a></li>
                   <li><a class="dropdown-item fw-bold" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=203260">Minhas informações</a></li>
                   <li><a class="dropdown-item fw-bold" href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=209051">Normas e procedimentos</a></li>
-          
+             
                 </div>
               </div>
             </ul>
           </div>
-          <a class="nav-link" href="https://capital.sp.gov.br/todas-as-not%C3%ADcias">Notícias</a>
+          <a
+            class="nav-link"
+            href="https://capital.sp.gov.br/todas-as-not%C3%ADcias"
+            >Notícias</a
+          >
         </nav>
       </div>
     </header>
-    
 
-    <div class="container-blocos">
-      <div class="row g-4">
-        <div class="col-12 col-md-4">
-          <a href="http://sigpecrh.app.prodam/" class="program-link" target="_blank">
-            <div class="program-box">SIGPEC-RH</div>
-          </a>
-        </div>
-        <div class="col-12 col-md-4">
-          <a href="http://sigpecdss.pmsp/Ergon/Ergon/PM/MenuPM.tp" class="program-link" target="_blank">
-            <div class="program-box">SIGPEC-DSS</div>
-          </a>
-        </div>
-        <div class="col-12 col-md-4">
-          <a href="https://www.areaprivada.prefeitura.sp.gov.br/PortalPMSP/PortalPMSP/Portal/PMSPprt001.tp" class="program-link" target="_blank">
-            <div class="program-box">SIPGEC-PS</div>
-          </a>
-        </div>
-        <div class="col-12 col-md-4">
-          <a href="" class="program-link" target="_blank">
-            <div class="program-box">SIGPEC-ES</div>
-          </a>
-        </div>
-        <div class="col-12 col-md-4">
-          <a href="https://prontuarioeletronico.prefeitura.sp.gov.br/" class="program-link" target="_blank">
-            <div class="program-box">SIGPEC-PE</div>
-          </a>
-        </div>
-        <div class="col-12 col-md-4">
-          <a href="" class="program-link" target="_blank">
-            <div class="program-box">SIGPEC-SST</div>
-          </a>
+    <div class="container">
+      <div class="container-blocos">
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <a
+              href="http://sigpecrh.app.prodam/"
+              class="program-link"
+              target="_blank"
+            >
+              <div class="program-box">SIGPEC-RH</div>
+            </a>
+          </div>
+          <div class="col-12 col-md-4">
+            <a
+              href="http://sigpecdss.pmsp/Ergon/Ergon/PM/MenuPM.tp"
+              class="program-link"
+              target="_blank"
+            >
+              <div class="program-box">SIGPEC-DSS</div>
+            </a>
+          </div>
+          <div class="col-12 col-md-4">
+            <a
+              href="https://www.areaprivada.prefeitura.sp.gov.br/PortalPMSP/PortalPMSP/Portal/PMSPprt001.tp"
+              class="program-link"
+              target="_blank"
+            >
+              <div class="program-box">SIPGEC-PS</div>
+            </a>
+          </div>
+          <div class="col-12 col-md-4">
+            <a href="#" class="program-link" target="_blank">
+              <div class="program-box">SIGPEC-ES</div>
+            </a>
+          </div>
+          <div class="col-12 col-md-4">
+            <a
+              href="https://prontuarioeletronico.prefeitura.sp.gov.br/"
+              class="program-link"
+              target="_blank"
+            >
+              <div class="program-box">SIGPEC-PE</div>
+            </a>
+          </div>
+          <div class="col-12 col-md-4">
+            <a href="" class="program-link" target="_blank">
+              <div class="program-box">SIGPEC-SST</div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-
-
-
     <!-- Footer -->
-    <footer class="text-white pt-5 pb-3" style="background-color: #ec6608;">
+    <footer class="text-white pt-5 pb-3" style="background-color: #ec6608">
       <div class="container">
-        <div class="row justify-content-around">
-          
-          <div class="col-6 col-md-2 mb-2 mt-3 px-5">
-            <p class="fw-bold text-nowrap normal mb-3 cursor-default">Prefeitura de São Paulo</p>
-            <ul class="list-unstyled small">
-              <li><a href="https://capital.sp.gov.br/agenda-do-prefeito" class="text-white text-decoration-none lh-xl text-nowrap ">Agenda do Prefeito</a></li>
-              <li><a href="https://capital.sp.gov.br/dia-do-prefeito" class="text-white text-decoration-none lh-xl text-nowrap ">Dia do Prefeito</a></li>
-              <li><a href="https://capital.sp.gov.br/web/comunicacao/w/organizacao/192554" class="text-white text-decoration-none lh-xl text-nowrap ">Conheça a equipe de governo</a></li>
-              <li><a href="https://capital.sp.gov.br/subprefeitura" class="text-white text-decoration-none lh-xl text-nowrap ">Subprefeituras</a></li>
-              <li><a href="https://capital.sp.gov.br/secretarias" class="text-white text-decoration-none lh-xl text-nowrap ">Secretarias</a></li>
-              <li><a href="https://capital.sp.gov.br/outros-%C3%B3rg%C3%A3os" class="text-white text-decoration-none lh-xl text-nowrap ">Outros órgãos</a></li>
-              <li><a href="https://sp156.prefeitura.sp.gov.br/portal" class="text-white text-decoration-none lh-xl text-nowrap ">156</a></li>
+        <div class="row justify-content-around acessibilidade footer-container">
+          <div class="col-6 col-md-2 mb-2 mt-5 px-5">
+            <p class="fw-bold text-nowrap normal mb-3 cursor-default">
+              Prefeitura de São Paulo
+            </p>
+            <ul class="list-unstyled small d-none d-lg-block">
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/agenda-do-prefeito"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Agenda do Prefeito</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/dia-do-prefeito"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Dia do Prefeito</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/comunicacao/w/organizacao/192554"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Conheça a equipe de governo</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/subprefeitura"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Subprefeituras</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/secretarias"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Secretarias</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/outros-%C3%B3rg%C3%A3os"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Outros órgãos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://sp156.prefeitura.sp.gov.br/portal"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >156</a
+                >
+              </li>
             </ul>
           </div>
-    
-          
-          <div class="col-6 col-md-2 mb-2 mt-3 px-5">
-            <p class="fw-bold text-nowrap small mb-3 cursor-default">Serviços para o Cidadão</p>
-            <ul class="list-unstyled small">
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=195534" class="text-white text-decoration-none lh-xl text-nowrap ">Animais</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=182553" class="text-white text-decoration-none lh-xl text-nowrap ">Casa e Moradia</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=193794" class="text-white text-decoration-none lh-xl text-nowrap ">Cultura e Economia Criativa</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=193398" class="text-white text-decoration-none lh-xl text-nowrap ">Educação</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=194817" class="text-white text-decoration-none lh-xl text-nowrap ">Esportes e Lazer</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=185692" class="text-white text-decoration-none lh-xl text-nowrap ">Família e Assistência Social</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=190770" class="text-white text-decoration-none lh-xl text-nowrap ">Fazenda</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=188442" class="text-white text-decoration-none lh-xl text-nowrap ">Mobilidade Urbana e Transporte</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=183339" class="text-white text-decoration-none lh-xl text-nowrap ">Rua e Bairro</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=190857" class="text-white text-decoration-none lh-xl text-nowrap ">Saúde e Bem-estar</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=196305" class="text-white text-decoration-none lh-xl text-nowrap ">Segurança</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=190800" class="text-white text-decoration-none lh-xl text-nowrap ">Trabalho</a></li>
-              
+
+          <div class="col-6 col-md-2 mb-2 mt-5 px-5">
+            <p class="fw-bold text-nowrap normal mb-3 cursor-default">
+              Serviços para o Cidadão
+            </p>
+            <ul class="list-unstyled small d-none d-lg-flex flex-lg-column">
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=195534"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Animais</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=182553"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Casa e Moradia</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=193794"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Cultura e Economia Criativa</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=193398"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Educação</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=194817"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Esportes e Lazer</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=185692"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Família e Assistência Social</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=190770"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Fazenda</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=188442"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Mobilidade Urbana e Transporte</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=183339"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Rua e Bairro</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=190857"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Saúde e Bem-estar</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=196305"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Segurança</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/cidadao?rootCategoryId=122642&categoryId=190800"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Trabalho</a
+                >
+              </li>
             </ul>
           </div>
-    
-          
-          <div class="col-6 col-md-2 mb-2 mt-3 px-5">
-            <p class="fw-bold text-nowrap small mb-3 cursor-default">Serviços para Empresas</p>
-            <ul class="list-unstyled small">
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=197736" class="text-white text-decoration-none lh-xl text-nowrap">Abertura de Empresas</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=197907" class="text-white text-decoration-none lh-xl text-nowrap">Alvarás, Certidões e Licenças</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=199983" class="text-white text-decoration-none lh-xl text-nowrap">Cadastro</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201153" class="text-white text-decoration-none lh-xl text-nowrap">Consultas, Declarações e Normas</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201903" class="text-white text-decoration-none lh-xl text-nowrap">Cursos</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201594" class="text-white text-decoration-none lh-xl text-nowrap">Emprendedorismo</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=199248" class="text-white text-decoration-none lh-xl text-nowrap">Impostos e Taxas</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201429" class="text-white text-decoration-none lh-xl text-nowrap">Legislação</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=200490" class="text-white text-decoration-none lh-xl text-nowrap">Licitações e Fornecedores</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645" class="text-white text-decoration-none lh-xl text-nowrap">Nota do Milhão</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201813" class="text-white text-decoration-none lh-xl text-nowrap">Oportunidades</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=197769" class="text-white text-decoration-none lh-xl text-nowrap">Programas e Benefícios</a></li>
-              
+
+          <div class="col-6 col-md-2 mb-2 mt-5 px-5">
+            <p class="fw-bold text-nowrap normal mb-3 cursor-default">
+              Serviços para Empresas
+            </p>
+            <ul class="list-unstyled small d-none d-lg-flex flex-lg-column">
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=197736"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Abertura de Empresas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=197907"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Alvarás, Certidões e Licenças</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=199983"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Cadastro</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201153"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Consultas, Declarações e Normas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201903"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Cursos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201594"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Emprendedorismo</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=199248"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Impostos e Taxas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201429"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Legislação</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=200490"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Licitações e Fornecedores</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Nota do Milhão</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=201813"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Oportunidades</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servicos/empresa?rootCategoryId=122645&categoryId=197769"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Programas e Benefícios</a
+                >
+              </li>
             </ul>
           </div>
-    
-          
-          <div class="col-6 col-md-2 mb-2 mt-3 px-5">
-            <p class="fw-bold text-nowrap small mb-3 cursor-default">Serviços para o Servidor</p>
-            <ul class="list-unstyled small">
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=212939" class="text-white text-decoration-none lh-xl text-nowrap">Atendimento</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=203617" class="text-white text-decoration-none lh-xl text-nowrap">Benefícios</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=206445" class="text-white text-decoration-none lh-xl text-nowrap">Carreira</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=213140" class="text-white text-decoration-none lh-xl text-nowrap">Comunicados e Publicações</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=213638" class="text-white text-decoration-none lh-xl text-nowrap">Eventos para o Servidor</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=207796" class="text-white text-decoration-none lh-xl text-nowrap">Gestão de Pessoas</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=203260" class="text-white text-decoration-none lh-xl text-nowrap">Minhas Informações</a></li>
-              <li><a href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=209051" class="text-white text-decoration-none lh-xl text-nowrap">Normas e procedimentos</a></li>
-              
+
+          <div class="col-6 col-md-2 mb-2 mt-5 px-5">
+            <p class="fw-bold text-nowrap normal mb-3 cursor-default">
+              Serviços para o Servidor
+            </p>
+            <ul class="list-unstyled small d-none d-lg-flex flex-lg-column">
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=212939"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Atendimento</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=203617"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Benefícios</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=206445"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Carreira</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=213140"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Comunicados e Publicações</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=213638"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Eventos para o Servidor</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=207796"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Gestão de Pessoas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=203260"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Minhas Informações</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/prefeitura-de-sao-paulo/servidores?rootCategoryId=234537&categoryId=209051"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Normas e procedimentos</a
+                >
+              </li>
             </ul>
           </div>
-    
-          
-          <div class="col-6 col-md-2 mb-2 mt-3 px-5">
-            <p class="fw-bold text-nowrap small mb-3 cursor-default">Acontece na cidade</p>
-            <ul class="list-unstyled small">
-              <li><a href="https://capital.sp.gov.br/noticias" class="text-white text-decoration-none lh-xl text-nowrap">Notícias</a></li>
-              <li><a href="https://geosampa.prefeitura.sp.gov.br/PaginasPublicas/_SBC.aspx" class="text-white text-decoration-none lh-xl text-nowrap" >Mapa de Serviços</a></li>
-              <li><a href="https://legislacao.prefeitura.sp.gov.br/" class="text-white text-decoration-none lh-xl text-nowrap">Portal da Legislação</a></li>
-              <li><a href="https://processos.prefeitura.sp.gov.br/Forms/Principal.aspx" class="text-white text-decoration-none lh-xl text-nowrap">Pesquisas de Processos</a></li>
-              <li><a href="http://e-negocioscidadesp.prefeitura.sp.gov.br/" class="text-white text-decoration-none lh-xl text-nowrap">Licitações</a></li>
-              <li><a href="https://capital.sp.gov.br/web/gestao/w/coordenadoria_de_bens_e_servicos__cobes/atas_de_registro_de_preco/24208" class="text-white text-decoration-none lh-xl text-nowrap">Ata de Registro de Preços</a></li>
-              <li><a href="https://www.sptrans.com.br/busca-de-itinerarios/" class="text-white text-decoration-none lh-xl text-nowrap">Itinerários de ônibus</a></li>
-              
+
+          <div class="col-6 col-md-2 mb-2 mt-5 px-5">
+            <p class="fw-bold text-nowrap normal mb-3 cursor-default">
+              Acontece na cidade
+            </p>
+            <ul class="list-unstyled small d-none d-lg-flex flex-lg-column">
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/noticias"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Notícias</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://geosampa.prefeitura.sp.gov.br/PaginasPublicas/_SBC.aspx"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Mapa de Serviços</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://legislacao.prefeitura.sp.gov.br/"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Portal da Legislação</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://processos.prefeitura.sp.gov.br/Forms/Principal.aspx"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Pesquisas de Processos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://e-negocioscidadesp.prefeitura.sp.gov.br/"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Licitações</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://capital.sp.gov.br/web/gestao/w/coordenadoria_de_bens_e_servicos__cobes/atas_de_registro_de_preco/24208"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Ata de Registro de Preços</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.sptrans.com.br/busca-de-itinerarios/"
+                  class="text-white text-decoration-none lh-xl text-nowrap"
+                  >Itinerários de ônibus</a
+                >
+              </li>
             </ul>
           </div>
         </div>
 
         <!-- Logos -->
         <div class="container">
-          <div class="d-flex justify-content-end gap-3">
-            <a href="https://br.linkedin.com/company/prefeitura-de-sao-paulo"><i class="bi bi-linkedin text-white fs-4"></i></a>
-            <a href="https://www.tiktok.com/@prefsp"><i class="bi bi-tiktok text-white fs-4"></i></a>
-            <a href="https://www.youtube.com/prefeiturasaopaulo"><i class="bi bi-youtube text-white fs-4"></i></a>
-            <a href="https://x.com/prefsp"><i class="bi bi-twitter-x text-white fs-4"></i></a>
-            <a href="https://www.instagram.com/prefsp/#"><i class="bi bi-instagram text-white fs-4"></i></a>
-            <a href="https://www.facebook.com/PrefSP"><i class="bi bi-facebook text-white fs-4"></i></a>
-            <a href="https://diariooficial.prefeitura.sp.gov.br/md_epubli_controlador.php?acao=inicio" target="_blank" class="d-flex align-items-center text-white text-decoration-none">
-              <img src="./imgs/brasao_branco-removebg-preview.png" alt="Logo" class="img-fluid " style="height: 35px;">
-            Diário Oficial
+          <div
+            class="d-flex align-items-center justify-content-center justify-content-lg-end gap-3"
+          >
+            <a href="https://br.linkedin.com/company/prefeitura-de-sao-paulo">
+              <i class="bi bi-linkedin text-white fs-4"></i>
+            </a>
+            <a href="https://www.tiktok.com/@prefsp">
+              <i class="bi bi-tiktok text-white fs-4"></i>
+            </a>
+            <a href="https://www.youtube.com/prefeiturasaopaulo">
+              <i class="bi bi-youtube text-white fs-4"></i>
+            </a>
+            <a href="https://x.com/prefsp">
+              <i class="bi bi-twitter-x text-white fs-4"></i>
+            </a>
+            <a href="https://www.instagram.com/prefsp/#">
+              <i class="bi bi-instagram text-white fs-4"></i>
+            </a>
+            <a href="https://www.facebook.com/PrefSP">
+              <i class="bi bi-facebook text-white fs-4"></i>
+            </a>
+            <a
+              href="https://diariooficial.prefeitura.sp.gov.br/md_epubli_controlador.php?acao=inicio"
+              target="_blank"
+              class="d-flex align-items-center text-white text-decoration-none"
+            >
+              <img
+                src="./imgs/brasao_branco-removebg-preview.png"
+                alt="Logo"
+                class="img-fluid"
+                style="height: 35px"
+              />
+              Diário Oficial
             </a>
           </div>
         </div>
-        
       </div>
     
         
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mx-2 pt-4">
+        <div class="d-flex flex-column flex-md-row justify-content-around align-items-center mt-4 pt-4">
           <div class="d-flex align-items-center mb-3 mb-md-0">
             <img src="./imgs/teste.png" alt="Cidade de São Paulo" style="height: 55px; margin-right: 10px;">
           </div>
@@ -327,7 +902,7 @@
               <button class="btn btn-outline-light btn-sm">Faça sua Solicitação</button>
             </a>
           </div>
-          <div class="d-flex justify-content-end gap-3">
+          <div class="text-center small">
             © COPYRIGHT 2025, Prefeitura Municipal de São Paulo - CEP: 01002-020
           </div>
         </div>
@@ -335,13 +910,9 @@
         
 
     </footer>
-    
-
-
-
-
 
     <!-- Bootstrap JS -->
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
