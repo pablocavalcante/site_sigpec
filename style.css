@@ -154,11 +154,16 @@ span {
 
 .dropdown-item {
   font-size: 2rem;
-  transition: color 0.5s ease;
+  transition: color 0.5s ease; /* Transição para mudar a cor dos itens */
 }
 
 .dropdown-item:hover {
   color: #eb6608;
+}
+
+/* Remove o background dos itens Órgãos Públicos e Servidores */
+.bg-color:hover{
+  background-color: transparent;
 }
 
 .dropdown .dropdown-menu {
@@ -189,6 +194,7 @@ span {
   font-size: 1.6rem;
 }
 
+/* Coloca a borda na parte de baixo */
 .border-bottom-text {
   position: relative;
   transition: color 0.8s ease;
@@ -199,7 +205,7 @@ span {
   position: absolute;
   left: 10px; /* Desloca a borda para a direita */
   bottom: 0;
-  width: calc(100% - 20px); /* Garante que a borda tenha o tamanho correto */
+  width: calc(100% - 20px);
   border-bottom: 1px solid #d5d4d8;
 }
 
