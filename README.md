@@ -12,10 +12,6 @@ Desenvolver uma interface moderna e acessível que atenda às diretrizes de usab
 - **JavaScript**
 - **Bootstrap**
 
-  ## Live Server:
-  - https://pablocavalcante.github.io/site_sigpec/
-
-
 
 
 
