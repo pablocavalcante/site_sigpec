@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background-color: #f7f6f9;
+  background-color: #EEECF3;
   font-family: "DM Sans", sans-serif;
 }
 
@@ -187,7 +187,13 @@ span {
   visibility: visible;
 }
 
-
+.dropdown-menu{
+  background-color: #EEECF3;
+  border-radius: 0px 0px 10px 10px;
+  line-height: 4rem;
+  border: none;
+}
+ 
 
 
 
