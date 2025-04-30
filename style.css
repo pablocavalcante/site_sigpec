@@ -153,23 +153,17 @@ span {
 }
 
 .dropdown-item {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  transition: color 0.5s ease; /* Transição para mudar a cor dos itens */
 }
 
+.dropdown-item:hover {
+  color: #eb6608;
+}
 
-/* Responsividade */
-@media (max-width: 992px) {
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.4rem;
-    line-height: 0;
-    margin-bottom: 2rem;
-  }
-
-  .footer-container p {
-    cursor: pointer;
-  }
+/* Remove o background dos itens Órgãos Públicos e Servidores */
+.bg-color:hover{
+  background-color: transparent;
 }
 
 .dropdown .dropdown-menu {
@@ -185,6 +179,58 @@ span {
   opacity: 1;
   transform: translateY(2);
   visibility: visible;
+}
+
+.dropdown-menu{
+  background-color: #EEECF3;
+  border-radius: 0px 0px 10px 10px;
+  line-height: 4rem;
+  border: none;
+  transition: color 0.8s ease;
+}
+
+.dropdown-item-text {
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+/* Coloca a borda na parte de baixo */
+.border-bottom-text {
+  position: relative;
+  transition: color 0.8s ease;
+}
+
+.border-bottom-text::after {
+  content: '';
+  position: absolute;
+  left: 10px; /* Desloca a borda para a direita */
+  bottom: 0;
+  width: calc(100% - 20px);
+  border-bottom: 1px solid #d5d4d8;
+}
+
+.border-bottom-text:hover {
+  color: #eb6608;
+}
+
+
+
+
+
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    line-height: 0;
+    margin-bottom: 2rem;
+  }
+
+  .footer-container p {
+    cursor: pointer;
+  }
 }
 
 .dropdown-menu{
