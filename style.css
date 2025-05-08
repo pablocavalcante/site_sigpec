@@ -227,6 +227,85 @@ span {
   vertical-align: middle;
 }
 
+/* BOTÃO AJUDA */
+#widget-ajuda {
+  position: fixed;
+  bottom: 0px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#caixa-ajuda {
+  width: 300px;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 9998;
+  padding: 15px;
+  font-size: 1.5rem;
+}
+
+#caixa-ajuda h5 {
+  font-weight: bold;
+}
+
+#botao-ajuda{
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-ajuda input {
+  margin-bottom: 10px;
+}
+
+#fechar-ajuda {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+.form-control {
+  outline: none;
+  font-size: 1.2rem;
+}
+
+.btn-orange {
+  background-color: #eb6608;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+}
+
+.btn-orange:hover {
+  background-color: #fff;
+  color: #eb6608;
+  border: 1px solid #eb6608;
+}
+
+
+.text-area{
+  resize: none;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.164);
+  border-radius: 1rem;
+  width: 100%;
+  height: 10rem;
+  font-size: 1.3rem;
+  padding: 0.5rem 0 0 0.5rem;
+}
+
 
 
 
@@ -257,7 +336,6 @@ span {
 @media (max-width: 375px){
   .texto-menor{
     font-size: 0.92rem;
-   
   }
 }
  

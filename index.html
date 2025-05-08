@@ -37,7 +37,7 @@
           <a href="http://transparencia.prefeitura.sp.gov.br/">Transparência São Paulo </a>
           <span class="divisor"></span>
           <a href="https://legislacao.prefeitura.sp.gov.br/" class="d-none d-lg-block">Legislação</a>
-          <span class="divisor d-none d-lg-block"></span>
+          <span class="divisor"></span>
           <a href="https://capital.sp.gov.br/web/ouvidoria/w/fale_com_a_ouvidoria/227268" class="d-none d-lg-block">Ouvidoria</a>
           <span class="divisor d-none d-lg-block"></span>
           <a href="https://sp156.prefeitura.sp.gov.br/portal">156</a>
@@ -425,6 +425,31 @@
         </nav>
       </div>
     </header>
+
+
+    <!-- Botão Flutuante de Ajuda -->
+    <div id="widget-ajuda">
+      <button class="btn btn-danger rounded p-3" id="botao-ajuda" title="Ajuda">
+        <i class="bi bi-chat-right-text"></i>
+        Como podemos ajudar?
+      </button>
+    </div>
+
+    <!-- Caixa de Ajuda com Formulário -->
+    <div id="caixa-ajuda" class="border">
+      <button id="fechar-ajuda">&times;</button>
+      <h2 class="mb-3">Olá! Precisa de ajuda?</h2>
+      <p>Digite seus dados e clique em enviar. Responderemos o quanto antes.</p>
+      <form class="form-ajuda">
+        <input type="text" class="form-control" placeholder="Nome completo" required>
+        <input type="email" class="form-control" placeholder="E-mail" required>
+        <input type="tel" class="form-control" placeholder="Telefone (opcional)">
+        <textarea class="text-area form-control" placeholder="Digite sua mensagem..."></textarea>
+        <button type="submit" class="btn-ajuda btn-orange w-100 mt-2">Enviar</button>
+      </form>
+    </div>
+
+
 
     <!-- Preenchimento do body -->
     <div class="container fw-bold pb-5">
