@@ -253,6 +253,13 @@ span {
   line-height: 4rem;
   border: none;
 }
+
+@media (max-width: 375px){
+  .texto-menor{
+    font-size: 0.92rem;
+   
+  }
+}
  
 
 
