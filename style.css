@@ -237,6 +237,8 @@ span {
 
 #caixa-ajuda {
   width: 300px;
+  height: auto;
+  max-height: 800px;
   position: fixed;
   bottom: 80px;
   right: 20px;
@@ -247,6 +249,21 @@ span {
   z-index: 9998;
   padding: 15px;
   font-size: 1.5rem;
+  transition: height 0.3s ease-in-out;
+  overflow: hidden; 
+}
+
+#caixa-ajuda.visivel{
+  display: block;
+}
+
+/* Classe para expandir a caixa */
+#caixa-ajuda.expanded {
+  height: auto !important; 
+}
+
+#chatbot-container {
+  margin-top: 15px; 
 }
 
 #caixa-ajuda h5 {
