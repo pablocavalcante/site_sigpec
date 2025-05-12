@@ -12,10 +12,6 @@ const perguntasRespostas = [
         resposta: 'Para redefinir sua senha, clique em "Esqueci minha senha".'
     },
     {
-        pergunta: 'esqueci',
-        resposta: 'Para redefinir sua senha, clique em "Esqueci minha senha".'
-    },
-    {
         pergunta: 'erro',
         resposta: 'Parece que houve um erro. Encaminharemos sua solicitação ao setor de suporte.'
     },
