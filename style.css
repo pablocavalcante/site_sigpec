@@ -323,12 +323,14 @@ span {
   padding: 0.5rem 0 0 0.5rem;
 }
 
+input:disabled {
+  cursor: not-allowed;
+}
 
 
 
 
-
-/* Responsividade */
+/* --------------------------------------------- Responsividade --------------------------------------------------- */
 @media (max-width: 992px) {
   .footer-container {
     display: flex;
@@ -350,9 +352,42 @@ span {
   border: none;
 }
 
+/* Botão ajuda */
+@media (max-width: 425px){
+  #widget-ajuda {
+    position: fixed; /* Garante que permaneça fixo */
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+#botao-ajuda{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0px;
+}
+
+#caixa-ajuda {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto; 
+    max-height: 100%; 
+    border-radius: 0; 
+    padding: 20px; 
+    overflow-y: auto; 
+}
+
+}
+
 @media (max-width: 375px){
   .texto-menor{
-    font-size: 0.92rem;
+    font-size: 0.91rem;
   }
 }
  

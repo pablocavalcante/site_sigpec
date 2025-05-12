@@ -9,12 +9,67 @@ document.addEventListener('DOMContentLoaded', () => {
     const perguntaInput = document.getElementById('pergunta');
     const enviarPergunta = document.getElementById('enviar-pergunta');
     const caixaAjuda = document.getElementById('caixa-ajuda');
-    const botaoAjuda = document.getElementById('botao-ajuda'); // Captura o botão de ajuda
+    const botaoAjuda = document.getElementById('botao-ajuda');
     const fecharAjuda = document.getElementById('fechar-ajuda');
 
+    const toggleCaixaAjuda = () => {
+        const isHidden = window.getComputedStyle(caixaAjuda).display === 'none';
+        caixaAjuda.style.display = isHidden ? 'block' : 'none';
+        caixaAjuda.classList.toggle('expanded', isHidden);
+    };
+
+    const mostrarChatbot = () => {
+        nomeInput.disabled = true;
+        emailInput.disabled = true;
+        telefoneInput.disabled = true;
+        iniciarAtendimentoBotao?.remove();
+        chatbotContainer.style.display = 'block';
+        caixaAjuda.style.display = 'block';
+        caixaAjuda.classList.add('expanded');
+    };
+
+    const resetAtendimento = () => {
+        nomeInput.disabled = false;
+        emailInput.disabled = false;
+        telefoneInput.disabled = false;
+        chatbotContainer.style.display = 'none';
+        caixaAjuda.style.display = 'none';
+        caixaAjuda.classList.remove('expanded');
+        form.style.display = 'block';
+        if (iniciarAtendimentoBotao) {
+            iniciarAtendimentoBotao.style.display = 'block';
+        }
+    };
+
+    const responderChatbot = async (pergunta) => {
+        if (!pergunta) {
+            respostaChatbot.textContent = 'Por favor, digite uma pergunta.';
+            return;
+        }
+    
+        try {
+            const response = await fetch('http://localhost:3000/api/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ pergunta })
+            });
+    
+            const data = await response.json();
+            respostaChatbot.textContent = data.resposta;
+            perguntaInput.value = '';
+        } catch (error) {
+            respostaChatbot.textContent = 'Erro ao se comunicar com o servidor.';
+        }
+    };
+
+    // Oculta a caixa de ajuda inicialmente
+    caixaAjuda.style.display = 'none';
+
+    // Eventos
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-
         const nome = nomeInput.value.trim();
         const email = emailInput.value.trim();
 
@@ -23,72 +78,20 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        nomeInput.disabled = true;
-        emailInput.disabled = true;
-        telefoneInput.disabled = true;
-
-        if (iniciarAtendimentoBotao) {
-            iniciarAtendimentoBotao.remove();
-        }
-
-        chatbotContainer.style.display = 'block';
-        caixaAjuda.classList.add('expanded');
-        caixaAjuda.style.display = 'block';
+        mostrarChatbot();
     });
 
     enviarPergunta.addEventListener('click', () => {
-        const pergunta = perguntaInput.value.trim().toLowerCase();
-
-        if (!pergunta) {
-            respostaChatbot.textContent = 'Por favor, digite uma pergunta.';
-            return;
-        }
-
-        let resposta = '';
-
-        if (pergunta.includes('senha') || pergunta.includes('esqueci')) {
-            resposta = 'Se você esqueceu sua senha, acesse a página de login e clique em "Esqueci minha senha".';
-        } else if (pergunta.includes('erro') || pergunta.includes('problema')) {
-            resposta = 'Sentimos muito! Por favor, envie um e-mail para suporte@seudominio.com com os detalhes do problema.';
-        } else {
-            resposta = 'Não consegui entender sua pergunta. Para atendimento mais completo, entre em contato: suporte@seudominio.com ou (11) 99999-0000.';
-        }
-
-        respostaChatbot.textContent = resposta;
-        perguntaInput.value = '';
+        responderChatbot(perguntaInput.value.trim());
     });
 
-    // Fazer a pergunta com o botão de enter
-    perguntaInput.addEventListener('keypress', function (e) {
+    perguntaInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             e.preventDefault();
             enviarPergunta.click();
         }
     });
 
-    caixaAjuda.style.display = 'none'; // Inicialmente a caixa de ajuda está escondida
-
-    botaoAjuda.addEventListener('click', () => {
-        const estiloCaixaAjuda = window.getComputedStyle(caixaAjuda);
-        caixaAjuda.style.display = estiloCaixaAjuda.display === 'none' ? 'block' : 'none';
-        if (estiloCaixaAjuda.display === 'none') {
-            caixaAjuda.classList.add('expanded');
-        } else {
-            caixaAjuda.classList.remove('expanded');
-        }
-    });
-
-    fecharAjuda.addEventListener('click', () => {
-        caixaAjuda.style.display = 'none';
-        caixaAjuda.classList.remove('expanded');
-        form.style.display = 'block';
-        chatbotContainer.style.display = 'none';
-        // Reabilita os campos e (opcionalmente) mostra o botão de iniciar atendimento novamente
-        nomeInput.disabled = false;
-        emailInput.disabled = false;
-        telefoneInput.disabled = false;
-        if (iniciarAtendimentoBotao) {
-            iniciarAtendimentoBotao.style.display = 'block';
-        }
-    });
+    botaoAjuda.addEventListener('click', toggleCaixaAjuda);
+    fecharAjuda.addEventListener('click', resetAtendimento);
 });
