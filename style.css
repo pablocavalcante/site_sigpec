@@ -366,7 +366,8 @@ input:disabled {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 0px;
+  margin-left: 0rem;
+  height: 6rem;
 }
 
 #caixa-ajuda {
