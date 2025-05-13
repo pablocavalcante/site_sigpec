@@ -5,6 +5,9 @@ Este projeto representa a interface visual do sistema **SIGPEC (Sistema de Gest�
 ## 🎨 Objetivo
 Desenvolver uma interface moderna e acessível que atenda às diretrizes de usabilidade e identidade visual do governo, servindo como base para futuras integrações com APIs e sistemas de backend.
 
+ ## Live Server:
+- https://pablocavalcante.github.io/site_sigpec/
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5**
