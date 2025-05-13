@@ -12,6 +12,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const botaoAjuda = document.getElementById('botao-ajuda');
     const fecharAjuda = document.getElementById('fechar-ajuda');
 
+    const perguntasRespostas = [
+        {
+            sinonimos: ['senha', 'esqueci a senha', 'login', 'acesso', 'dificuldade'],
+            resposta: 'Para redefinir sua senha, clique em "Esqueci minha senha".'
+        },
+        {
+            sinonimos: ['erro', 'problema', 'falha', 'não consigo'],
+            resposta: 'Parece que houve um erro. Encaminharemos sua solicitação ao setor de suporte'
+        },
+        {
+            sinonimos: ['como posso entrar em contato?', 'meios de contato?', 'onde encontro vocês?', 'fale conosco.'],
+            resposta: 'Entraremos em contato com você em breve através do seu e-mail.'
+        },
+        {
+            sinonimos: ['qual o horário de atendimento?', 'horário de funcionamento?', 'vocês trabalham que horas?', 'atendimento ao público.'],
+            resposta: 'Nosso horário de atendimento é de 9h às 17h.'
+        },
+        
+    ];
+
     const toggleCaixaAjuda = () => {
         const isHidden = window.getComputedStyle(caixaAjuda).display === 'none';
         caixaAjuda.style.display = isHidden ? 'block' : 'none';
@@ -41,27 +61,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    const responderChatbot = async (pergunta) => {
-        if (!pergunta) {
+    const responderChatbot = (perguntaDigitada) => {
+        if (!perguntaDigitada) {
             respostaChatbot.textContent = 'Por favor, digite uma pergunta.';
             return;
         }
     
-        try {
-            const response = await fetch('http://localhost:3000/api/chat', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ pergunta })
-            });
+        const perguntaMinuscula = perguntaDigitada.toLowerCase().trim();
+        let respostaEncontrada = null;
     
-            const data = await response.json();
-            respostaChatbot.textContent = data.resposta;
-            perguntaInput.value = '';
-        } catch (error) {
-            respostaChatbot.textContent = 'Erro ao se comunicar com o servidor.';
+        for (const item of perguntasRespostas) {
+            for (const sinonimo of item.sinonimos) {
+                if (perguntaMinuscula.includes(sinonimo.toLowerCase())) {
+                    respostaEncontrada = item.resposta;
+                    break; // Se encontramos um sinônimo, podemos parar de procurar neste item
+                }
+            }
+            if (respostaEncontrada) {
+                break; // Se encontramos uma resposta, podemos parar de procurar nos outros itens
+            }
         }
+    
+        if (respostaEncontrada) {
+            respostaChatbot.textContent = respostaEncontrada;
+        } else {
+            respostaChatbot.textContent = 'Desculpe, não tenho uma resposta para essa pergunta.';
+        }
+    
+        perguntaInput.value = '';
     };
 
     // Oculta a caixa de ajuda inicialmente
